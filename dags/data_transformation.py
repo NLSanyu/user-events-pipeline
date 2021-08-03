@@ -16,7 +16,7 @@ def download_s3_data():
 default_args = {
     'owner': 'Lydia',
     'start_date': datetime(2021, 5, 7),
-    'email': config('ODK_EMAIL'),
+    'email': 'some@mail.com',
     'email_on_failure': True,
     'email_on_retry': True,
     'retries': 1,
