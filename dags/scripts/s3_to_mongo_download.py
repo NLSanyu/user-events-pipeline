@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 import boto3
 import logging
 import traceback

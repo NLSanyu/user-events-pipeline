@@ -1,10 +1,17 @@
+import os
+import sys
+# sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+# sys.path.insert(0, 'scripts/')
+
 from airflow.models import DAG
 from airflow.utils.dates import days_ago
 from airflow.operators.python_operator import PythonOperator
 from datetime import datetime, timedelta
-from decouple import config
-from scripts.amplitude_to_s3_upload import upload_to_s3
-from scripts.s3_to_mongo_download import download_to_mongo
+
+from scripts import (
+    upload_to_s3,
+    download_to_mongo
+)
 
 
 def upload_amplitude_data():
